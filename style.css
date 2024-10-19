@@ -37,8 +37,13 @@ body {
     justify-content: space-between;
 }
 
-.left-paragraph, .right-paragraph {
+.left-paragraph {
     color: #FF6B82;
+    margin: 10px;
+    text-align: center; /* Center text */
+}
+.right-paragraph {
+    /* color: #FF6B82; */
     margin: 10px;
     text-align: center; /* Center text */
 }
@@ -74,17 +79,17 @@ body {
     margin: 0 auto; /* Center the container */
 }
 
-.box {
+ .box {
     background-color: #fff8f0;
-    border: 1px solid #ff6f91;
+    border: 1px solid gray;
     border-radius: 5px;
     padding: 20px;
-    width: 100%; /* Set width to 100% of the box */
+    width: 100%; 
     position: relative;
-    text-align: center; /* Center content in the box */
-}
+    text-align: center; 
+} 
 
-.most-popular {
+/* .most-popular {
     position: absolute;
     top: -10px;
     right: -10px;
@@ -94,7 +99,21 @@ body {
     border-radius: 5px;
     font-size: 12px;
     font-weight: bold;
+} */
+
+.most-popular {
+    position: absolute;
+    top: -10px; /* Positioning */
+    right: -10px; /* Adjust if necessary */
+    background-color: #ff6f91;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1; /* Ensure it appears above other content */
 }
+
 
 .discount {
     background-color: #ff6f91;
@@ -157,8 +176,27 @@ select {
 }
 
 .standard-price-label {
-    margin-top: 5px; /* Space above the label */
-    font-size: 14px; /* Adjust size as needed */
-    color: #FF6B82; /* Match your color theme */
-    text-align: center; /* Center the text */
+    margin-top: 5px; 
+    font-size: 14px; 
+    /* color: #FF6B82;  */
+    text-align: center; 
 }
+
+.box {
+    background-color: #fff8f0;
+    border: 1px solid #ff6f91;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%; /* Set width to 100% of the container */
+    height: 45px; /* Fixed height */
+    position: relative;
+    text-align: center; /* Center content in the box */
+    margin: 0 auto; /* Center the box horizontally */
+    transition: height 0.3s ease; /* Smooth transition for height change */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.box.expanded {
+    height: 200px; /* Height when expanded on hover or click */
+}
+
