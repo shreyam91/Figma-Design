@@ -2,12 +2,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh;  */
     margin: 0;
+    flex-direction: column; /* Stack children vertically */
 }
 
 .line-container {
-    width: 100;
+    width: 700px; /* Set to 700px to match other elements */
     display: flex;
     align-items: center;
     text-align: center;
@@ -28,36 +29,24 @@ body {
 }
 
 .text-footer {
-    width: 100%; 
+    width: 700px; /* Set to 700px */
     display: flex;
     justify-content: center; 
     margin-bottom: 20px;
     text-align: center;
-    width: 100%;
     justify-content: space-between;
 }
 
-.left-paragraph{
-    /* flex: 2; */
-    /* padding: 20px; */
-    /* border-radius: 5px; */
-    /* margin: 0 10px; */
+.left-paragraph, .right-paragraph {
     color: #FF6B82;
     margin: 10px;
+    text-align: center; /* Center text */
 }
-
-.right-paragraph {
-    /* flex: ; */
-    /* padding: 20px; */
-    /* border-radius: 5px; */
-    /* margin: 0 10px; */
-    margin: 10px;
-}
-
 
 .button {
     display: block;
-    width: 100%;
+    width: 100%; /* Full width of the container */
+    max-width: 700px; /* Set max-width to 700px */
     height: 60px;
     padding: 10px;
     background-color: #FF6B82;
@@ -67,6 +56,7 @@ body {
     cursor: pointer;
     text-align: center;
     font-size: 18px;
+    margin: 0 auto; /* Center button horizontally */
 }
 
 .radio-container {
@@ -75,3 +65,100 @@ body {
     margin: 10px 0; /* Spacing between radio options */
 }
 
+.container {
+    display: flex;
+    flex-direction: column; /* Keep boxes in a column */
+    width: 700px; /* Set to 700px */
+    padding: 20px;
+    gap: 20px; /* Adds space between the boxes */
+    margin: 0 auto; /* Center the container */
+}
+
+.box {
+    background-color: #fff8f0;
+    border: 1px solid #ff6f91;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%; /* Set width to 100% of the box */
+    position: relative;
+    text-align: center; /* Center content in the box */
+}
+
+.most-popular {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff6f91;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.discount {
+    background-color: #ff6f91;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.price-unit-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.standard-price {
+    font-size: 14px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+}
+
+.options {
+    margin-top: 10px;
+}
+
+.options-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.options div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.options div label {
+    margin-right: 5px;
+}
+
+select {
+    padding: 5px;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.standard-price-label {
+    margin-top: 5px; /* Space above the label */
+    font-size: 14px; /* Adjust size as needed */
+    color: #FF6B82; /* Match your color theme */
+    text-align: center; /* Center the text */
+}
